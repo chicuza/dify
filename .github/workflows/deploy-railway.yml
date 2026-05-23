@@ -1,0 +1,66 @@
+name: Deploy Railway
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      working_directory:
+        description: "Repository path to deploy (relative to root)"
+        required: true
+        default: "."
+        type: string
+      service:
+        description: "Railway service name (optional)"
+        required: false
+        type: string
+      environment:
+        description: "Railway environment name (optional)"
+        required: false
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      RAILWAY_PROJECT_ID: ${{ vars.RAILWAY_PROJECT_ID || secrets.RAILWAY_PROJECT_ID }}
+      WORKING_DIRECTORY: ${{ inputs.working_directory }}
+      RAILWAY_SERVICE: ${{ inputs.service }}
+      RAILWAY_ENVIRONMENT: ${{ inputs.environment }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: Validate required secrets
+        run: |
+          if [ -z "$RAILWAY_TOKEN" ]; then
+            echo "Missing required secret: RAILWAY_TOKEN"
+            exit 1
+          fi
+
+          if [ -z "$RAILWAY_PROJECT_ID" ]; then
+            echo "Missing required variable/secret: RAILWAY_PROJECT_ID"
+            exit 1
+          fi
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli@3
+
+      - name: Deploy to Railway
+        run: |
+          set -euo pipefail
+          cd "$WORKING_DIRECTORY"
+
+          args=(up)
+
+          if [ -n "$RAILWAY_SERVICE" ]; then
+            args+=(--service "$RAILWAY_SERVICE")
+          fi
+
+          if [ -n "$RAILWAY_ENVIRONMENT" ]; then
+            args+=(--environment "$RAILWAY_ENVIRONMENT")
+          fi
+
+          railway "${args[@]}"
