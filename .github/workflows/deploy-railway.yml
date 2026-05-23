@@ -40,8 +40,13 @@ jobs:
             exit 1
           fi
 
+          if [ -z "$RAILWAY_PROJECT_ID" ]; then
+            echo "Missing required variable/secret: RAILWAY_PROJECT_ID"
+            exit 1
+          fi
+
       - name: Install Railway CLI
-        run: npm install -g @railway/cli
+        run: npm install -g @railway/cli@3
 
       - name: Deploy to Railway
         run: |
