@@ -22,6 +22,7 @@
 /* Project-only runtime CSS variables (gradients and special masks). */
 @import '../../themes/manual-light.css' layer(base);
 @import '../../themes/manual-dark.css' layer(base);
+@import '../../themes/amabile.css' layer(base);
 @import './monaco-sticky-fix.css' layer(base);
 
 /* Component CSS using @apply / @utility. */
