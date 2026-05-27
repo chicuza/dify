@@ -38,15 +38,27 @@ const LocaleLayout = async ({
   return (
     <html lang={locale ?? 'pt-BR'} className="h-full" data-theme="light" suppressHydrationWarning style={{ colorScheme: 'light', backgroundColor: '#FFFFFF' }}>
       <head>
-        <link rel="manifest" href="/manifest.json" />
+        <title>Amábile AI</title>
+        <meta name="description" content="Plataforma Amábile AI — IA nativa para empresas" />
+        <meta name="application-name" content="Amábile AI" />
+        <meta property="og:title" content="Amábile AI" />
+        <meta property="og:description" content="Plataforma Amábile AI — IA nativa para empresas" />
+        <meta property="og:image" content="/og-image.png?v=amabile-2" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Amábile AI" />
+        <meta name="twitter:image" content="/og-image.png?v=amabile-2" />
+        <link rel="manifest" href="/manifest.json?v=amabile-2" />
         <meta name="theme-color" content="#A78BFA" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Amábile AI" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-192x192.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=amabile-2" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=amabile-2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=amabile-2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=amabile-2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=amabile-2" />
         <meta name="msapplication-TileColor" content="#A78BFA" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
