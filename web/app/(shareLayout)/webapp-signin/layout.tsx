@@ -27,7 +27,7 @@ export default function SignInLayout({ children }: PropsWithChildren) {
               {' '}
               {new Date().getFullYear()}
               {' '}
-              LangGenius, Inc. All rights reserved.
+              <a href="https://amabile.ai" target="_blank" rel="noopener noreferrer" className="hover:underline">Amábile AI</a>. Todos os direitos reservados.
             </div>
           )}
         </div>
