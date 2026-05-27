@@ -1,7 +1,7 @@
 {
-  "name": "Dify",
-  "short_name": "Dify",
-  "description": "Build Production Ready Agentic AI Solutions",
+  "name": "Amábile AI",
+  "short_name": "Amábile",
+  "description": "Plataforma Amábile AI — IA nativa para empresas",
   "icons": [
     {
       "src": "/icon-192x192.png",
@@ -31,14 +31,14 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#1C64F2",
-  "background_color": "#ffffff",
+  "theme_color": "#A78BFA",
+  "background_color": "#FDF6F3",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "orientation": "portrait-primary",
   "categories": ["productivity", "utilities", "developer"],
-  "lang": "en-US",
+  "lang": "pt-BR",
   "dir": "ltr",
   "prefer_related_applications": false,
   "shortcuts": [

@@ -39,15 +39,15 @@ const LocaleLayout = async ({
     <html lang={locale ?? 'en'} className="h-full" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#1C64F2" />
+        <meta name="theme-color" content="#A78BFA" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Dify" />
+        <meta name="apple-mobile-web-app-title" content="Amábile AI" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icon-192x192.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icon-192x192.png" />
-        <meta name="msapplication-TileColor" content="#1C64F2" />
+        <meta name="msapplication-TileColor" content="#A78BFA" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
         <CreateAppAttributionBootstrap />
