@@ -12,7 +12,7 @@ type ForumDeps = Record<string, never>
  */
 export const forumCommand: SlashCommandHandler<ForumDeps> = {
   name: 'forum',
-  description: 'Open Dify community forum',
+  description: 'Open Amábile AI community forum',
   mode: 'direct',
 
   // Direct execution function
