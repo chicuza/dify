@@ -1,0 +1,41 @@
+/* Amábile AI brand overrides — applied after manual-light.css */
+/* Primary palette: Purple #A78BFA / Pink #EC4899 / Orange #F8923C / Cream #FDF6F3 / Charcoal #1D1D35 */
+
+html[data-theme="light"] {
+  /* Brand primary — purple (replaces Dify blue #1C64F2 / #155aef / #296dff) */
+  --color-components-button-primary-bg: #7C6FF4;
+  --color-components-button-primary-bg-hover: #6B5EDF;
+  --color-components-button-primary-bg-disabled: #C7BFFC;
+  --color-components-button-primary-text: #FFFFFF;
+
+  /* Secondary/accent links — WCAG AA contrast on light bg */
+  --color-text-accent: #6D28D9;
+  --color-text-accent-secondary: #7C3AED;
+  --color-components-input-text-focus: #6D28D9;
+  --color-components-input-border-active: #A78BFA;
+
+  /* Billing gradients (replaces #03F/#0033FF) */
+  --color-billing-plan-title-bg: linear-gradient(95deg, #7C6FF4 29.47%, #EC4899 105.31%);
+  --color-billing-plan-title-team-bg: linear-gradient(95deg, #EC4899 29.47%, #F8923C 105.31%);
+  --color-billing-plan-card-enterprise-bg: linear-gradient(180deg, #7C6FF4 0%, rgba(124, 111, 244, 0) 100%);
+
+  /* Workflow connector & active states */
+  --color-workflow-link-line-handle: #A78BFA;
+  --color-workflow-link-line-active: #7C6FF4;
+
+  /* Chat bubble accents */
+  --color-chat-bubble-accent: #A78BFA;
+}
+
+/* Force light scheme even in dark token contexts */
+html, body {
+  color-scheme: light !important;
+  background-color: #FDF6F3;
+}
+
+/* Focus visible — WCAG 2.4.7 AA */
+*:focus-visible {
+  outline: 2px solid #6D28D9 !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
