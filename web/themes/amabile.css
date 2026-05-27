@@ -1,6 +1,34 @@
 /* Amábile AI brand overrides — applied after manual-light.css */
 /* Primary palette: Purple #A78BFA / Pink #EC4899 / Orange #F8923C / Cream #FDF6F3 / Charcoal #1D1D35 */
 
+/* FORCE LIGHT MODE — applies even before ThemeProvider hydrates */
+html {
+  color-scheme: light !important;
+  background-color: #FFFFFF;
+}
+
+html, html[data-theme="light"], html:not([data-theme]) {
+  --color-background-body: #FFFFFF;
+  --color-background-default: #FFFFFF;
+  --color-background-default-subtle: #FAFAFA;
+  --color-background-default-dimm: #F5F5F5;
+  --color-background-default-burn: #FAFAFA;
+}
+
+body {
+  background-color: #FFFFFF !important;
+  color: #1D1D35;
+}
+
+/* Override the dark fallback for users with OS in dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    color-scheme: light !important;
+    background-color: #FFFFFF !important;
+    color: #1D1D35 !important;
+  }
+}
+
 html[data-theme="light"] {
   /* Brand primary — purple (replaces Dify blue #1C64F2 / #155aef / #296dff) */
   --color-components-button-primary-bg: #7C6FF4;
@@ -25,12 +53,6 @@ html[data-theme="light"] {
 
   /* Chat bubble accents */
   --color-chat-bubble-accent: #A78BFA;
-}
-
-/* Force light scheme even in dark token contexts */
-html, body {
-  color-scheme: light !important;
-  background-color: #FDF6F3;
 }
 
 /* Focus visible — WCAG 2.4.7 AA */

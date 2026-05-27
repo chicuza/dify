@@ -36,7 +36,7 @@ const LocaleLayout = async ({
   const nonce = IS_PROD ? (await headers()).get('x-nonce') ?? undefined : undefined
 
   return (
-    <html lang={locale ?? 'pt-BR'} className="h-full" suppressHydrationWarning style={{ colorScheme: 'light' }}>
+    <html lang={locale ?? 'pt-BR'} className="h-full" data-theme="light" suppressHydrationWarning style={{ colorScheme: 'light', backgroundColor: '#FFFFFF' }}>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#A78BFA" />
@@ -55,7 +55,8 @@ const LocaleLayout = async ({
         <ReactScanLoader />
       </head>
       <body
-        className="h-full select-auto"
+        className="h-full select-auto bg-white text-text-primary"
+        style={{ backgroundColor: '#FFFFFF', colorScheme: 'light' }}
         {...datasetMap}
       >
         <div className="isolate h-full">
