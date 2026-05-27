@@ -10,16 +10,13 @@ export default function useDocumentTitle(title: string) {
   const { data, isPending } = useQuery(systemFeaturesQueryOptions())
   const systemFeatures = data ?? defaultSystemFeatures
   const prefix = title ? `${title} - ` : ''
-  let titleStr = ''
-  let favicon = ''
+  // Default IMMEDIATELY (avoid '' which keeps stale title from prior PWA/cache)
+  let titleStr = `${prefix}Amábile AI`
+  let favicon = `${basePath}/favicon.ico`
   if (isPending === false) {
-    if (systemFeatures.branding.enabled) {
+    if (systemFeatures.branding.enabled && systemFeatures.branding.application_title) {
       titleStr = `${prefix}${systemFeatures.branding.application_title}`
-      favicon = systemFeatures.branding.favicon
-    }
-    else {
-      titleStr = `${prefix}Amábile AI`
-      favicon = `${basePath}/favicon.ico`
+      favicon = systemFeatures.branding.favicon || favicon
     }
   }
   useTitle(titleStr)

@@ -1,4 +1,4 @@
-import type { Viewport } from '@/next'
+import type { Metadata, Viewport } from '@/next'
 import { ToastHost } from '@langgenius/dify-ui/toast'
 import { TooltipProvider } from '@langgenius/dify-ui/tooltip'
 import { Provider as JotaiProvider } from 'jotai/react'
