@@ -1,0 +1,12 @@
+# Railway build config for Amabile AI rebrand
+# Tells Railway to use the monorepo root as Docker build context
+# while using web/Dockerfile (which assumes context = repo root)
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "web/Dockerfile"
+
+[deploy]
+healthcheckPath = "/"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
