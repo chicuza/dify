@@ -1,41 +1,36 @@
-.spin-animation path {
-    animation: custom 2s linear infinite;
+/* Amábile AI loading animation — pulsing rotation of the brand mark */
+.spin-animation {
+  animation:
+    amabile-spin 1.6s cubic-bezier(0.6, 0.2, 0.4, 1) infinite,
+    amabile-pulse 1.6s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
 }
 
-@keyframes custom {
-    0% {
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 0.1;
-    }
-
-    50% {
-        opacity: 0.2;
-    }
-
-    75% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
+@keyframes amabile-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
-.spin-animation path:nth-child(1) {
-    animation-delay: 0s;
+@keyframes amabile-pulse {
+  0%, 100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
-.spin-animation path:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-.spin-animation path:nth-child(3) {
-    animation-delay: 1s;
-}
-
-.spin-animation path:nth-child(4) {
-    animation-delay: 1.5s;
+/* Reduce motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .spin-animation {
+    animation: amabile-pulse 2s ease-in-out infinite;
+  }
 }

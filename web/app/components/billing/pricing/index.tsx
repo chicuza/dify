@@ -49,8 +49,8 @@ const Pricing: FC<PricingProps> = ({
 
   const pricingPageLanguage = useGetPricingPageLanguage()
   const pricingPageURL = pricingPageLanguage
-    ? `https://dify.ai/${pricingPageLanguage}/pricing#plans-and-features`
-    : 'https://dify.ai/pricing#plans-and-features'
+    ? `https://amabile.ai/${pricingPageLanguage}/pricing#plans-and-features`
+    : 'https://amabile.ai/pricing#plans-and-features'
 
   return (
     <Dialog

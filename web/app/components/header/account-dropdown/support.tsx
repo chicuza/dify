@@ -57,7 +57,7 @@ export default function Support() {
           )}
           <DropdownMenuLinkItem
             className="justify-between"
-            href="https://forum.dify.ai/"
+            href="https://amabile.ai"
             rel="noopener noreferrer"
             target="_blank"
           >

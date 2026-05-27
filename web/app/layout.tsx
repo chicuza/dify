@@ -36,7 +36,7 @@ const LocaleLayout = async ({
   const nonce = IS_PROD ? (await headers()).get('x-nonce') ?? undefined : undefined
 
   return (
-    <html lang={locale ?? 'en'} className="h-full" suppressHydrationWarning>
+    <html lang={locale ?? 'pt-BR'} className="h-full" suppressHydrationWarning style={{ colorScheme: 'light' }}>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#A78BFA" />
@@ -62,8 +62,9 @@ const LocaleLayout = async ({
           <JotaiProvider>
             <ThemeProvider
               attribute="data-theme"
-              defaultTheme="system"
-              enableSystem
+              defaultTheme="light"
+              forcedTheme="light"
+              enableSystem={false}
               disableTransitionOnChange
               nonce={nonce}
             >

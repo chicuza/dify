@@ -64,17 +64,17 @@ export default function AccountAbout({
                 ©
                 {dayjs().year()}
                 {' '}
-                LangGenius, Inc., Contributors.
+                Amábile AI
               </div>
               <div className="text-text-accent">
                 {
                   IS_CE_EDITION
-                    ? <Link href="https://github.com/langgenius/dify/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Open Source License</Link>
+                    ? <Link href="https://github.com/chicuza/dify/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Open Source License</Link>
                     : (
                         <>
-                          <Link href="https://dify.ai/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>
+                          <Link href="https://amabile.ai/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>
                           ,&nbsp;
-                          <Link href="https://dify.ai/terms" target="_blank" rel="noopener noreferrer">Terms of Service</Link>
+                          <Link href="https://amabile.ai/terms" target="_blank" rel="noopener noreferrer">Terms of Service</Link>
                         </>
                       )
                 }
@@ -93,7 +93,7 @@ export default function AccountAbout({
             <div className="flex shrink-0 items-center">
               <Button className="mr-2" size="small">
                 <Link
-                  href="https://github.com/langgenius/dify/releases"
+                  href="https://github.com/chicuza/dify/releases"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

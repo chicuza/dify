@@ -7,14 +7,14 @@ import { basePath } from '@/utils/var'
 export type LogoStyle = 'default' | 'monochromeWhite'
 
 export const logoPathMap: Record<LogoStyle, string> = {
-  default: '/logo/logo.svg',
-  monochromeWhite: '/logo/logo-monochrome-white.svg',
+  default: '/logo/logo.png',
+  monochromeWhite: '/logo/logo.png',
 }
 
 export type LogoSize = 'large' | 'medium' | 'small'
 
 export const logoSizeMap: Record<LogoSize, string> = {
-  large: 'w-16 h-7',
+  large: 'w-40 h-10',
   medium: 'w-12 h-[22px]',
   small: 'w-9 h-4',
 }
@@ -37,7 +37,7 @@ const DifyLogo: FC<DifyLogoProps> = ({
     <img
       src={`${basePath}${logoPathMap[themedStyle]}`}
       className={cn('block object-contain', logoSizeMap[size], className)}
-      alt="Dify logo"
+      alt="Amábile AI"
     />
   )
 }

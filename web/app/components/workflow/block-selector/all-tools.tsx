@@ -300,7 +300,7 @@ const AllTools = ({
                 {t('tabs.noPluginsFound', { ns: 'workflow' })}
               </div>
               <Link
-                href="https://github.com/langgenius/dify-plugins/issues/new?template=plugin_request.yaml"
+                href="https://amabile.ai"
                 target="_blank"
               >
                 <Button

@@ -250,7 +250,7 @@ const NormalForm = () => {
                   className="system-xs-medium text-text-secondary hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://dify.ai/terms"
+                  href="https://amabile.ai/terms"
                 >
                   {t('tos', { ns: 'login' })}
                 </Link>
@@ -259,7 +259,7 @@ const NormalForm = () => {
                   className="system-xs-medium text-text-secondary hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://dify.ai/privacy"
+                  href="https://amabile.ai/privacy"
                 >
                   {t('pp', { ns: 'login' })}
                 </Link>
